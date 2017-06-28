@@ -30,7 +30,7 @@ final class VerifyResource  {
 
        /** throw a warning, no need for exception here **/
        if (!$f) {
-        printf((string) new \CatapultApiWarning("$k is not a valid term in model " . get_class($object)));
+         trigger_error((string) new \CatapultApiWarning("$k is not a valid term in model " . get_class($object)), E_USER_WARNING);
        }
     }
   }
